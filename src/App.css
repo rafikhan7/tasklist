@@ -25,8 +25,14 @@ header .logo{
   align-items: center;
 }
 
+ h1 {
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 100px;
+  color: rgba(28,9,80,0.75);
+}
 header .logo img{
-  max-width: 40px;
+  max-width: 300px;
   cursor: pointer;
 }
 

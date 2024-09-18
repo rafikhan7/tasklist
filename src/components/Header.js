@@ -1,13 +1,13 @@
-import logo from '../assets/logo.png'
+import logo from "../assets/logo.png";
 
-const Header = ({children, theme, setTheme}) => {
-  return (
-    <div>
-        <span className='logo' >
-            <img src={logo} alt='logo'/> 
-        </span>
-        <span>Task List</span>
-        <span className="themeSelector">
+const Header = ({theme, setTheme}) => {
+    return (
+        <header>
+            <span className="logo">
+                <img src={logo} alt="" />
+                <h1> Stay Organized, Achieve More-Your Tasks, Simplified</h1>
+            </span>
+            <span className="themeSelector">
                 <span onClick={() => setTheme("light")} className={ theme === "light" ? "light activeTheme" : "light"}></span>
                 <span onClick={() => setTheme("medium")} className={ theme === "medium" ? "medium activeTheme" : "medium"}></span>
                 <span onClick={() => setTheme("dark")} className={ theme === "dark" ? "dark activeTheme" : "dark"}></span>
@@ -15,7 +15,8 @@ const Header = ({children, theme, setTheme}) => {
                 <span onClick={() => setTheme("gTwo")} className={ theme === "gTwo" ? "gTwo activeTheme" : "gTwo"}></span>
                 <span onClick={() => setTheme("gThree")} className={ theme === "gThree" ? "gThree activeTheme" : "gThree"}></span>
             </span>
-    </div>
-  )
+        </header>
+    )
 }
+
 export default Header;
