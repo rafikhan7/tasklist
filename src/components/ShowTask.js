@@ -1,4 +1,4 @@
-const ShowTask = ({tasklist, setTasklist, handleEdit, handleDelete, donTask, setDonTask, handleDone}) => {
+const ShowTask = ({tasklist, setTasklist, handleEdit, handleDelete, donTask, setDonTask, handleDone, handleDoneDelete}) => {
     return (
         <>
         <section className='showTask'>
@@ -43,7 +43,7 @@ const ShowTask = ({tasklist, setTasklist, handleEdit, handleDelete, donTask, set
                         <p>
                             <span className="name">{task.name}</span>
                             <span className="time">{task.time}</span>
-                            <i className="bi bi-trash" onClick={() => handleDelete(task.id)}></i>
+                            <i className="bi bi-trash" onClick={() => handleDoneDelete(task.id)}></i>
                             <span className="name">Done</span>
                         </p>                
         

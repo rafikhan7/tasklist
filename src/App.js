@@ -43,7 +43,11 @@ function App() {
     setTasklist(updatedTasklist);
     
   }
-
+  const handleDoneDelete = (id) => {
+    const updatedTasklist = tasklist.filter(task => task.id !== id);
+    setDonTask(updatedTasklist);
+    
+  }
   const handleDone = (id) => {
     const doneTaskList =tasklist.find(task => task.id === id);
     setDonTask([...donTask, doneTaskList]);
@@ -66,7 +70,7 @@ function App() {
           Taskmate
         </Header>
         <AddTask handleSubmit={handleSubmit} editid={editid} task={task} setTask={setTask}/>
-        <ShowTask tasklist={tasklist} setTasklist={setTasklist} handleEdit={handleEdit} handleDelete={handleDelete} handleDone={handleDone} donTask={donTask} setDonTask={setDonTask}/>
+        <ShowTask tasklist={tasklist} setTasklist={setTasklist} handleEdit={handleEdit} handleDelete={handleDelete} handleDone={handleDone} donTask={donTask} setDonTask={setDonTask} handleDoneDelete={handleDoneDelete}/>
       </div>
     </div>
   );
